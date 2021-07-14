@@ -9,7 +9,7 @@ export default [
     redirect:'/overview/all',
     children: [
       {
-        path: '/overview/all',
+        path: '/overview',
         name: '我的会议',
       },
       {
