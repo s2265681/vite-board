@@ -2,6 +2,9 @@ import { Col, Card, Row } from "antd";
 import React, { FC, useEffect, useState } from "react";
 const { Meta } = Card;
 import Cookies from "js-cookie";
+import {useHistory} from 'dva'
+
+
 
 function writeCookie() {
   let token =
@@ -44,7 +47,9 @@ const Overview: FC = () => {
             }).then((res) => res.json())
             items[index].spaceBasicInfo.imgSrc = result.data
             if(index===len-1){
+              setTimeout(()=>{
                 setShowArr(items)
+              },200)
             }
         });
       });
@@ -54,10 +59,9 @@ const Overview: FC = () => {
   return (
     <div className="site-card-wrapper">
       <Row gutter={16}>
-        {showArr.map((subArr: any, idxGroup) => {
-            console.log(subArr.spaceBasicInfo.imgSrc,'subArr.spaceBasicInfo.imgSrc')
+        {showArr.map((subArr: any, index:number) => {
           return (
-            <Col span={4} key={idxGroup}>
+            <Col span={4} key={index}>
               <Card
                 hoverable
                 style={{ width: 240 }}
