@@ -5,7 +5,6 @@ import moment from 'moment';
 
 import { router } from 'dva';
 const { Switch, Route, useRouteMatch, Redirect } = router;
-
 import Create from './Create';
 import Join from './Join';
 import All from './All';

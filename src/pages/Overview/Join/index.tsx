@@ -1,23 +1,12 @@
-import { Col, DatePicker, Form, Input, Row, Select } from 'antd';
-import React, { FC, useEffect } from 'react';
-import moment from 'moment';
+import React, { FC } from "react";
+import CardPage from '../component/CardPage'
 
-const Overview: FC = () => {
-
-  const hashChange=(eee:any)=>{
-    console.log('1111');
-    console.log(eee)
-  }
-
-  useEffect(()=>{
-      // window.addEventListener('hashchange',hashChange)
-  },[])
-
+const Join: FC = () => {
   return (
-    <div>    
-       Join
+    <div className="site-card-wrapper">
+        <CardPage apitype="participate"/>
     </div>
   );
 };
 
-export default Overview;
+export default Join;
