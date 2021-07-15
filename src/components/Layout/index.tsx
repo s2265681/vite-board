@@ -93,10 +93,10 @@ const App: FC = ({ children }: PropsWithChildren<any>) => {
         },
       ],
       extra: [
-        <Link to="/m/KonvaBoard">
+        <Link to="/m/FabricBoard">
           <Button key="3">加入FabricBoard会议</Button>
         </Link>,
-        <Link to="/m/FabricBoard">
+        <Link to="/m/KonvaBoard">
           <Button key="2" type="primary">
             加入KonvaBoard会议
           </Button>

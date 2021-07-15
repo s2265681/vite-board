@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext", "es6", "dom" ],
     "baseUrl": "./src", // 工作根目录
     "target": "esnext", // 编译的目标设置为最新版本
     "module": "esnext", // 指定生成最新的模块系统
