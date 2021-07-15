@@ -1,4 +1,4 @@
-import { Col, Card, Row } from "antd";
+import { Col, Card, Row, message } from "antd";
 import React, { FC, useEffect, useState } from "react";
 const { Meta } = Card;
 import Cookies from "js-cookie";
@@ -63,6 +63,13 @@ const CardPage: FC<Iprops> = ({ apitype }) => {
             }, 200);
           }
         });
+      })
+      .catch(err=>{
+        // message.error(err)
+        setIsEmpty(true)
+      })
+      .finally(()=>{
+        setIsLoading(false)
       })
   }, []);
 
