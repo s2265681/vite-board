@@ -1,5 +1,13 @@
 
 import { useState, useEffect, useCallback } from 'react'
+
+
+
+import { fabric } from 'fabric'
+
+const setOSSDomain = (url) => `https://teamind-static-oss.teamind.co/${url}`
+
+
 export const useWindowSize = () => {
     const [windowSize, setWindowSize] = useState({
       width: window.innerWidth,
