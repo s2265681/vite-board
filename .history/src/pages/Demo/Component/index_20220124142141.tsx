@@ -1,8 +1,7 @@
 import React, { FC } from "react";
-import useCountDown from "../../../hooks/useCountDown";
+import useCountDown from "hooks/useCountDown";
 const Component: FC = () => {
-  const [timer] = useCountDown(3);
-  console.log(timer, "timer...");
+  const timer = useCountDown();
   return <div>demo组件</div>;
 };
 
